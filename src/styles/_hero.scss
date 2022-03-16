@@ -1,0 +1,28 @@
+/*-----------------------------
+    HERO
+-----------------------------*/
+
+.hero {
+  height: 85vh;
+  min-height: 500px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-block {
+  margin-top: -100px;
+  height: 170px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.hero-title {
+  letter-spacing: 5px;
+}
+.address {
+  letter-spacing: 3px;
+  margin-top: 20px;
+}

@@ -1,0 +1,24 @@
+/*-----------------------------
+    NAVIGATION
+-----------------------------*/
+
+.navigation {
+  width: 100%;
+  height: 15vh;
+  min-height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  letter-spacing: 3px;
+
+  .company-logo img {
+    height: 90px;
+  }
+
+  .nav-links {
+    display: flex;
+    width: 500px;
+    justify-content: space-around;
+  }
+}

@@ -17,7 +17,7 @@ const Navigation = () => {
           <a href="#">CONTACT</a>
         </li>
       </ul>
-      <button>ORDER ONLINE</button>
+      <button className="btn-order-online">ORDER ONLINE</button>
     </nav>
   );
 };
