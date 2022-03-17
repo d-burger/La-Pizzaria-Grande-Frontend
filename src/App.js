@@ -3,6 +3,7 @@ import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
 import Menu from "./components/Menu";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       </div>
       <Menu />
       <Contact />
+      <Footer />
     </div>
   );
 };

@@ -1,4 +1,7 @@
 $font-family-main: "Bangers", cursive;
+$font-size-nav-links: 20px;
+$font-size-btn: 16px;
+$font-size-hero-title: 36px;
 
 $color-background: #f3ebde;
 $color-main: rgb(54, 68, 75);
@@ -10,3 +13,5 @@ $color-btn-border: rgb(0, 0, 0);
 @import "./hero";
 @import "./menu";
 @import "./contact";
+@import "./footer";
+@import "./mediaqueries";

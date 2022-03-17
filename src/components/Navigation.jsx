@@ -11,13 +11,13 @@ const Navigation = () => {
           <a href="#">HOME</a>
         </li>
         <li className="nav-link">
-          <a href="#">MENU</a>
+          <a href="#menu">MENU</a>
         </li>
         <li className="nav-link">
-          <a href="#">CONTACT</a>
+          <a href="#contact">CONTACT</a>
         </li>
       </ul>
-      <button className="btn-order-online">ORDER ONLINE</button>
+      <button className="btn-order-online btn-nav">ORDER ONLINE</button>
     </nav>
   );
 };
