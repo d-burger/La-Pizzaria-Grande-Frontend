@@ -51,7 +51,7 @@ const Contact = () => {
         <Map
           className="map"
           height={300}
-          width={100}
+          // width={300}
           defaultCenter={[48.137154, 11.576124]}
           defaultZoom={15}
         >
