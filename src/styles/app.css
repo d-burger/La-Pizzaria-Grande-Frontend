@@ -79,7 +79,7 @@ a {
 -----------------------------*/
 .hero {
   height: 85vh;
-  min-height: 500px;
+  min-height: 800px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,6 +118,10 @@ a {
   margin-top: 20px;
 }
 
+.m-pizza-slice {
+  display: none;
+}
+
 /*-----------------------------
     MENU
 -----------------------------*/
@@ -132,7 +136,6 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   padding-top: 50px;
-  padding-bottom: 50px;
 }
 
 .menu-container {
@@ -221,6 +224,11 @@ a {
           flex-direction: column;
 }
 
+.map-container {
+  width: 60%;
+  max-width: 700px;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -270,14 +278,61 @@ a {
 /*-----------------------------
     MEDIAQUERIES
 -----------------------------*/
-.m-pizza-slice {
-  display: none;
+.navigation {
+  max-width: 1300px;
+  margin: auto;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1800px) {
+  .dishes {
+    width: 90%;
+    max-width: 900px;
+  }
+  .menu-container .menu-title {
+    margin-bottom: 20px;
+  }
+  .dish-title {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
   .landing-page {
-    background-color: #f3ebde;
-    background-image: none;
+    background-size: 95% auto;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .contact {
+    width: 90%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 70px 0 50px 0;
+  }
+  .contact-title {
+    margin-bottom: 45px;
+  }
+  .information-container {
+    margin-bottom: 30px;
+  }
+  .map-container {
+    width: 90%;
+  }
+  .m-footer {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 825px) {
+  .landing-page {
+    background-image: url("../images/cartoon-background10.svg");
+    background-position: center 80%;
+    background-size: 85% auto;
   }
   .navigation {
     -webkit-box-orient: vertical;
@@ -285,6 +340,7 @@ a {
         -ms-flex-direction: column;
             flex-direction: column;
     height: 30vh;
+    min-height: 180px;
   }
   .navigation .btn-nav {
     display: none;
@@ -297,6 +353,7 @@ a {
   }
   .hero {
     height: 70vh;
+    min-height: 700px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -313,19 +370,40 @@ a {
   .hero .hero-block {
     margin: 0;
   }
-  .hero .m-pizza-slice {
-    display: block;
-    margin-top: -80px;
-  }
-  .hero .m-pizza-slice img {
-    width: 270px;
-  }
   .dishes {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 80%;
+  }
+  .menu-container .menu-title {
+    margin-bottom: 20px;
+  }
+  .dish-title {
+    margin-top: 30px;
+  }
+  .m-footer {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .landing-page {
+    background-image: none;
+  }
+  .hero {
+    min-height: 500px;
+  }
+  .m-pizza-slice {
+    display: block;
+    margin-top: -80px;
+  }
+  .m-pizza-slice img {
+    width: 270px;
   }
 }
 /*# sourceMappingURL=app.css.map */

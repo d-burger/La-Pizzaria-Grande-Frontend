@@ -8,7 +8,7 @@ import {
 const Footer = () => {
   return (
     <div className="footer">
-      <div className="information-container">
+      <div className="information-container m-footer">
         <div className="flex">
           {" "}
           <div className="icon-container">

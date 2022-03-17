@@ -4,7 +4,7 @@
 
 .hero {
   height: 85vh;
-  min-height: 500px;
+  min-height: 800px;
 
   display: flex;
   align-items: center;
@@ -26,4 +26,7 @@
 .address {
   letter-spacing: 3px;
   margin-top: 20px;
+}
+.m-pizza-slice {
+  display: none;
 }
