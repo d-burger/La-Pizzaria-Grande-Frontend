@@ -11,7 +11,7 @@
   justify-content: center;
 }
 .hero-block {
-  margin-top: -100px;
+  margin-top: -150px;
   height: 170px;
 
   display: flex;
@@ -21,6 +21,7 @@
 }
 .hero-title {
   letter-spacing: 5px;
+  font-size: $font-size-hero-title;
 }
 .address {
   letter-spacing: 3px;

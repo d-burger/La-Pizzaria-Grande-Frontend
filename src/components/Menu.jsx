@@ -1,6 +1,6 @@
 const Menu = () => {
   return (
-    <div className="menu">
+    <div className="menu" id="menu">
       <div className="menu-container">
         <h1 className="menu-title">Menu</h1>
         <div className="dishes">
