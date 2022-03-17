@@ -1,7 +1,12 @@
-$font-family-main: "Roboto", sans-serif;
+$font-family-main: "Bangers", cursive;
 
-$color-background: #282e2f;
+$color-background: #f3ebde;
 $color-main: rgb(54, 68, 75);
 $color-special: rgb(42, 195, 200);
+$color-btn-border: rgb(0, 0, 0);
 
 @import "./general";
+@import "./navigation";
+@import "./hero";
+@import "./menu";
+@import "./contact";

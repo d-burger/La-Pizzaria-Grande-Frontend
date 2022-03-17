@@ -6,7 +6,11 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Bangers", cursive;
+}
+
+html {
+  height: 100%;
 }
 
 ul {
@@ -16,5 +20,174 @@ ul {
 a {
   text-decoration: none;
   color: black;
+}
+
+.btn-order-online {
+  padding: 10px;
+  border: 2px solid black;
+  background-color: #f3ebde;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25);
+  letter-spacing: 3px;
+}
+
+.landing-page {
+  background-color: #f3ebde;
+  background-image: url("../images/cartoon-background.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 65% auto;
+}
+
+/*-----------------------------
+    NAVIGATION
+-----------------------------*/
+.navigation {
+  width: 100%;
+  height: 15vh;
+  min-height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  letter-spacing: 3px;
+}
+
+.navigation .company-logo img {
+  height: 90px;
+}
+
+.navigation .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 500px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+/*-----------------------------
+    HERO
+-----------------------------*/
+.hero {
+  height: 85vh;
+  min-height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero-block {
+  margin-top: -100px;
+  height: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.hero-title {
+  letter-spacing: 5px;
+}
+
+.address {
+  letter-spacing: 3px;
+  margin-top: 20px;
+}
+
+/*-----------------------------
+    MENU
+-----------------------------*/
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.menu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  letter-spacing: 3px;
+}
+
+.menu-container .menu-title {
+  margin-bottom: 50px;
+  letter-spacing: 6px;
+}
+
+.dishes {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dish-title {
+  margin-bottom: 20px;
+}
+
+.dish {
+  padding: 10px;
+  letter-spacing: 2px;
+}
+
+/*-----------------------------
+    CONTACT
+-----------------------------*/
+.contact {
+  width: 60%;
+  margin: auto;
+  padding: 100px 0 100px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=app.css.map */
