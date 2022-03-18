@@ -1,4 +1,4 @@
-const Menu = () => {
+const Menu = ({ dishes }) => {
   return (
     <div className="menu" id="menu">
       <div className="menu-container">
@@ -7,25 +7,52 @@ const Menu = () => {
           <div className="pizza-container">
             <h2 className="dish-title">Pizza</h2>
             <div className="pizza-dishes">
-              <div className="dish"> Margherita ........... 6,00€</div>
-              <div className="dish"> Vegetaria ............ 8,00€</div>
-              <div className="dish"> Salami ............... 8,50€</div>
+              {dishes.map((dish, index) => {
+                if (dish.dish_category === "pizza")
+                  return (
+                    <div key={index}>
+                      <div className="dish">
+                        <div className="dish-name">{dish.dish_name}</div>
+                        <div className="dots">........... </div>
+                        <div className="dish-price">{dish.dish_price}€ </div>
+                      </div>
+                    </div>
+                  );
+              })}
             </div>
           </div>
           <div className="salad-container">
             <h2 className="dish-title">Salad</h2>
             <div className="salad-dishes">
-              <div className="dish"> Garden Salad ......... 5,00€</div>
-              <div className="dish"> Caesar Salad ......... 8,00€</div>
+              {dishes.map((dish, index) => {
+                if (dish.dish_category === "salad")
+                  return (
+                    <div key={index}>
+                      <div className="dish">
+                        <div className="dish-name">{dish.dish_name}</div>
+                        <div className="dots">........... </div>
+                        <div className="dish-price">{dish.dish_price}€ </div>
+                      </div>
+                    </div>
+                  );
+              })}
             </div>
           </div>
           <div className="drinks-container">
             <h2 className="dish-title">Drinks</h2>
             <div className="drink-dishes">
-              <div className="dish"> Coke ................. 5,00€</div>
-              <div className="dish"> Fanta ................ 5,00€</div>
-              <div className="dish"> Water ................ 5,00€</div>
-              <div className="dish"> Apple Juice .......... 5,00€</div>
+              {dishes.map((dish, index) => {
+                if (dish.dish_category === "drink")
+                  return (
+                    <div key={index}>
+                      <div className="dish">
+                        <div className="dish-name">{dish.dish_name}</div>
+                        <div className="dots">........... </div>
+                        <div className="dish-price">{dish.dish_price}€ </div>
+                      </div>
+                    </div>
+                  );
+              })}
             </div>
           </div>
         </div>

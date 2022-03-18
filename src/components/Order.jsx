@@ -1,14 +1,49 @@
 import NavigationOrder from "./NavigationOrder";
 import Footer from "./Footer";
+import { useForm } from "react-hook-form";
+import { useState } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
-const Order = () => {
+const Order = ({ dishes }) => {
+  const { register, handleSubmit } = useForm();
+
+  //-------- USESTATE ------------------------
+  const [data, setData] = useState("");
+
+  //-------- FUNCTIONS -----------------------
+  const onSubmit = async (dataForm) => {
+    Object.keys(dataForm).forEach((key) => {
+      if (dataForm[key] === "") {
+        delete dataForm[key];
+      }
+    });
+    const food = { ...dataForm };
+    Object.keys(food).forEach((key) => {
+      if (key == "name" || key == "time" || key == "phone" || key == "email") {
+        delete food[key];
+      }
+    });
+    dataForm.order = Object.entries(food);
+    try {
+      const { data } = await axios.post(
+        "http://localhost:5000/api/orders",
+        dataForm
+      );
+      alert("Thank you for your order!");
+      window.location.replace("http://localhost:3000/");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div>
       {" "}
       <div className="head">
         <NavigationOrder />
       </div>
-      <form action="">
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className="menu" id="menu">
           <div className="menu-container">
             <h1 className="menu-title">1. Choose dishes</h1>
@@ -16,58 +51,81 @@ const Order = () => {
               <div className="pizza-container">
                 <h2 className="dish-title">Pizza</h2>
                 <div className="pizza-dishes">
-                  <div className="dish">
-                    <input type="number" min="1" max="5" /> Margherita
-                    ........... 6,00€
-                  </div>
-                  <div className="dish">
-                    <input type="number" min="1" max="5" /> Vegetaria
-                    ............ 8,00€
-                  </div>
-                  <div className="dish">
-                    <input type="number" min="1" max="5" /> Salami
-                    ............... 8,50€
-                  </div>
+                  {dishes.map((dish, index) => {
+                    if (dish.dish_category === "pizza")
+                      return (
+                        <div key={index}>
+                          <div className="dish">
+                            <input
+                              {...register(dish.dish_name)}
+                              type="number"
+                              min="1"
+                              max="5"
+                            />{" "}
+                            <div className="dish-name">{dish.dish_name}</div>
+                            <div className="dots">........... </div>
+                            <div className="dish-price">
+                              {dish.dish_price}€{" "}
+                            </div>
+                          </div>
+                        </div>
+                      );
+                  })}
                 </div>
               </div>
               <div className="salad-container">
                 <h2 className="dish-title">Salad</h2>
                 <div className="salad-dishes">
-                  <div className="dish">
-                    <input type="number" min="1" max="5" /> Garden Salad
-                    ......... 5,00€
-                  </div>
-                  <div className="dish">
-                    <input type="number" min="1" max="5" /> Caesar Salad
-                    ......... 8,00€
-                  </div>
+                  {dishes.map((dish, index) => {
+                    if (dish.dish_category === "salad")
+                      return (
+                        <div key={index}>
+                          <div className="dish">
+                            <input
+                              {...register(dish.dish_name)}
+                              type="number"
+                              min="1"
+                              max="5"
+                            />{" "}
+                            <div className="dish-name">{dish.dish_name}</div>
+                            <div className="dots">........... </div>
+                            <div className="dish-price">
+                              {dish.dish_price}€{" "}
+                            </div>
+                          </div>
+                        </div>
+                      );
+                  })}
                 </div>
               </div>
               <div className="drinks-container">
                 <h2 className="dish-title">Drinks</h2>
                 <div className="drink-dishes">
-                  <div className="dish">
-                    <input type="number" min="1" max="5" /> Coke
-                    ................. 5,00€
-                  </div>
-                  <div className="dish">
-                    <input type="number" min="1" max="5" /> Fanta
-                    ................ 5,00€
-                  </div>
-                  <div className="dish">
-                    <input type="number" min="1" max="5" /> Water
-                    ................ 5,00€
-                  </div>
-                  <div className="dish">
-                    <input type="number" min="1" max="5" /> Apple Juice
-                    .......... 5,00€
-                  </div>
+                  {dishes.map((dish, index) => {
+                    if (dish.dish_category === "drink")
+                      return (
+                        <div key={index}>
+                          <div className="dish">
+                            <input
+                              {...register(dish.dish_name)}
+                              type="number"
+                              min="1"
+                              max="5"
+                            />{" "}
+                            <div className="dish-name">{dish.dish_name}</div>
+                            <div className="dots">........... </div>
+                            <div className="dish-price">
+                              {dish.dish_price}€{" "}
+                            </div>
+                          </div>
+                        </div>
+                      );
+                  })}
                 </div>
               </div>
             </div>
           </div>
         </div>
-
         <div className="order-completion-container">
           <h1 className="enter-data-title">2. Enter your data </h1>
           <div className="order-completion">
@@ -80,10 +138,10 @@ const Order = () => {
             </div>
             <div className="inputs-order-completion">
               {" "}
-              <input type="text" name="name" />
-              <input type="text" name="email" />
-              <input type="text" name="phone" />
-              <input type="text" name="time" />
+              <input {...register("name")} type="text" name="name" />
+              <input {...register("email")} type="text" name="email" />
+              <input {...register("phone")} type="text" name="phone" />
+              <input {...register("time")} type="text" name="time" />
             </div>
           </div>
         </div>
@@ -91,7 +149,9 @@ const Order = () => {
           {" "}
           <h1 className="enter-data-title">3. Check price </h1>
           <div className="total">Total: 23€</div>
-          <button className="btn-order-now">Order Now</button>
+          <button className="btn-order-now" type="submit">
+            Order Now
+          </button>
         </div>
       </form>
       <Footer />

@@ -14,7 +14,7 @@ const Hero = () => {
         <div className="address">
           {" "}
           <span>
-            <FontAwesomeIcon icon={faMapMarkerAlt} size="x" />
+            <FontAwesomeIcon icon={faMapMarkerAlt} size="1x" />
           </span>{" "}
           MARIENPLATZ 1, 80331 MÜNCHEN
         </div>

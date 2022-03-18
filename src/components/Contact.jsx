@@ -16,7 +16,7 @@ const Contact = () => {
             {" "}
             <div className="icon-container">
               {" "}
-              <FontAwesomeIcon icon={faMapMarkerAlt} size="x" />
+              <FontAwesomeIcon icon={faMapMarkerAlt} size="1x" />
             </div>
             <div>Marienplatz 1, 80331 München</div>
           </div>
@@ -25,7 +25,7 @@ const Contact = () => {
             <div className="icon-container">
               {" "}
               <a href="tel:0123456789">
-                <FontAwesomeIcon icon={faPhoneAlt} size="x" />
+                <FontAwesomeIcon icon={faPhoneAlt} size="1x" />
               </a>
             </div>
             <a href="tel:0123456789">
@@ -36,7 +36,7 @@ const Contact = () => {
             {" "}
             <div className="icon-container">
               <a href="mailto:pizzalover@xyz.com">
-                <FontAwesomeIcon icon={faEnvelope} size="x" />
+                <FontAwesomeIcon icon={faEnvelope} size="1x" />
               </a>
             </div>
             <a href="mailto:pizzalover@xyz.com">

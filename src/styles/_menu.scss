@@ -33,4 +33,8 @@
 .dish {
   padding: 10px;
   letter-spacing: 2px;
+  display: flex;
+  width: 250px;
+  align-items: center;
+  justify-content: space-between;
 }
