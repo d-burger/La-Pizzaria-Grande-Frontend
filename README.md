@@ -14,7 +14,7 @@
 <table align="center" width="70%"><tr><td valign="top" width="30%">
   <h3 align="center">Frontend</h3> 
   <div align="center">  
-    <img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/scss-original-wordmark.svg" alt="SCSS" height="50" /> 
+    <img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/sass-original-wordmark.svg" alt="sass" height="50" /> 
     <img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="50" />  
   </div>
 </td><td valign="top" width="30%">
