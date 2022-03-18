@@ -27,7 +27,10 @@
 
 ## Upcoming Features
 
-
+<ul>
+  <li>View Orders and edit menu in admin panel</li>
+  <li>Authorization/Authentication with JWT</li>
+</ul>
 
 ## Links
 <div>
