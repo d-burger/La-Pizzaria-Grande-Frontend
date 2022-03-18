@@ -4,6 +4,7 @@ import {
   faPhoneAlt,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -13,7 +14,7 @@ const Footer = () => {
           {" "}
           <div className="icon-container">
             {" "}
-            <FontAwesomeIcon icon={faMapMarkerAlt} size="x" />
+            <FontAwesomeIcon icon={faMapMarkerAlt} size="1x" />
           </div>
           <div>Marienplatz 1, 80331 München</div>
         </div>
@@ -22,7 +23,7 @@ const Footer = () => {
           <div className="icon-container">
             {" "}
             <a href="tel:0123456789">
-              <FontAwesomeIcon icon={faPhoneAlt} size="x" />
+              <FontAwesomeIcon icon={faPhoneAlt} size="1x" />
             </a>
           </div>
           <a href="tel:0123456789">
@@ -33,7 +34,7 @@ const Footer = () => {
           {" "}
           <div className="icon-container">
             <a href="mailto:pizzalover@xyz.com">
-              <FontAwesomeIcon icon={faEnvelope} size="x" />
+              <FontAwesomeIcon icon={faEnvelope} size="1x" />
             </a>
           </div>
           <a href="mailto:pizzalover@xyz.com">
@@ -43,7 +44,9 @@ const Footer = () => {
         </div>
       </div>
       <div>Copyright PizzaLover</div>
-      <button className="btn-login">Login</button>
+      <Link to="/admin">
+        <button className="btn-login">Login</button>
+      </Link>
     </div>
   );
 };
