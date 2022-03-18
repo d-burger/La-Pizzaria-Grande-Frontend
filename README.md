@@ -1,9 +1,11 @@
 ## Hello! 👋
 
 <div>
-  Thank you for taking a closer look at my MVP  for the coding challenge 💻. 
+  Thank you for taking a closer look at my MVP  for the coding challenge 💻. <br>
   
-  So far, a customer can find information about the restaurant and place an order from home or on the go because the website is responsive. The order is saved in the database.
+  So far, a customer can find information about the restaurant and place an order from home or on the go because the website is responsive. The order is saved in the database. <br>
+  
+  If scroll to the footer and click on "login", you are redirected to the admin panel.
 </div>  
 
 ## Tech Stack
