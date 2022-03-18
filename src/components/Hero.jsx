@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import PizzaSlice from "../images/PizzaSlice.svg";
@@ -7,7 +8,9 @@ const Hero = () => {
     <div className="hero">
       <div className="hero-block">
         <h1 className="hero-title">WE LOVE PIZZA</h1>
-        <button className="btn-order-online">ORDER ONLINE</button>
+        <Link to="/order-pizza">
+          <button className="btn-order-online">ORDER ONLINE</button>
+        </Link>
         <div className="address">
           {" "}
           <span>
