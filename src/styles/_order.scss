@@ -1,0 +1,64 @@
+/*-----------------------------
+    ORDER
+-----------------------------*/
+
+.order-completion-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: 2px;
+  margin-top: 70px;
+}
+.order-completion {
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.labels {
+  div {
+    margin-bottom: 10px;
+  }
+}
+.inputs-order-completion {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  input {
+    margin-bottom: 10px;
+  }
+}
+.enter-data-title {
+  margin-bottom: 50px;
+  letter-spacing: 6px;
+}
+.price-and-order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+}
+.btn-order-now {
+  padding: 10px;
+  border: 2px solid $color-btn-border;
+  background-color: $color-background;
+  border-radius: 10px;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25);
+  letter-spacing: 3px;
+  font-size: $font-size-btn;
+}
+
+.btn-order-now:hover {
+  background-color: black;
+  color: $color-background;
+  cursor: pointer;
+}
+
+.total {
+  font-size: 24px;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+.price-and-order {
+  margin-bottom: 50px;
+}

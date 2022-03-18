@@ -1,20 +1,19 @@
+import { Routes, Route } from "react-router-dom";
 import "./styles/app.scss";
 import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
-import Menu from "./components/Menu";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Home from "./components/Home";
+import Order from "./components/Order";
+import Admin from "./components/Admin";
 
 const App = () => {
   return (
     <div>
-      <div className="landing-page">
-        <Navigation />
-        <Hero />
-      </div>
-      <Menu />
-      <Contact />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/order-pizza" element={<Order />} />
+        <Route path="/admin" element={<Admin />} />
+      </Routes>
     </div>
   );
 };
