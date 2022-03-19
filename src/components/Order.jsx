@@ -1,7 +1,7 @@
 import NavigationOrder from "./NavigationOrder";
 import Footer from "./Footer";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
@@ -10,8 +10,17 @@ const Order = ({ dishes }) => {
 
   //-------- USESTATE ------------------------
   const [data, setData] = useState("");
+  const [total, setTotal] = useState();
+
+  //-------- USEEFFECT -----------------------
+  useEffect(() => {});
 
   //-------- FUNCTIONS -----------------------
+  const changeHandler = () => {
+    console.log("hi");
+    console.log(register("Margherita"));
+  };
+
   const onSubmit = async (dataForm) => {
     Object.keys(dataForm).forEach((key) => {
       if (dataForm[key] === "") {
@@ -61,6 +70,7 @@ const Order = ({ dishes }) => {
                               type="number"
                               min="1"
                               max="5"
+                              onChange={changeHandler}
                             />{" "}
                             <div className="dish-name">{dish.dish_name}</div>
                             <div className="dots">........... </div>
